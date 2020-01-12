@@ -3,11 +3,11 @@ import './navbar.css'
 
 const Navbar = () => {
     return (
-        <header className="TopNav">
+        <div className="TopNav">
             <div className="container">
                 <div>
                     <i className="fa fa-instagram" />
-                    <span> | Instagram</span>
+                    <span className="insta">Instagram</span>
                 </div>
                 <form className="searchBar">
                     <input type="text" placeholder="search..." />
@@ -19,7 +19,7 @@ const Navbar = () => {
                     <i className="fa fa-user" />
                 </div>
             </div>
-        </header>
+        </div>
     );
 };
 

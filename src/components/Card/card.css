@@ -1,0 +1,23 @@
+.card {
+    max-height: 500px;
+    width: 400px;
+    border: black solid 1px;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.cardHeader {
+    display: flex;
+    padding: 0px 20px 0px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.photo {
+    width: 100%;
+}
+
+.cardIcons {
+    display: flex;
+    align-items: flex-start;
+}
