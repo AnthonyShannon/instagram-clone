@@ -8,7 +8,12 @@ function App() {
   return (
     <div className="App">
         <Navbar />
-        <Card username="ashannon1990" imageURL={MyImage} />
+        <Card 
+        username="ashannon1990" 
+        imageURL={MyImage}
+        commentUsername="theGreatestEver2"
+        comment="This is a great pic of you, very professional"
+        />
     </div>
   );
 }

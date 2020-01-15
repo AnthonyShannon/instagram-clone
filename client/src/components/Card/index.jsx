@@ -3,10 +3,11 @@ import React from 'react';
 const styles = {
     Card: {
         maxHeight: '100%',
-        width: '600px',
+        width: '400px',
         border: '#d3d3d3 solid 1px',
         margin: 'auto',
-        marginTop: '60px'
+        marginTop: '60px',
+        backgroundColor: 'white'
     },
     CardHeader: {
         display: 'flex',
@@ -24,6 +25,9 @@ const styles = {
     },
     i: {
         margin: '10px'
+    },
+    comments: {
+        alignItems: 'left'
     }
 }
 
@@ -40,6 +44,10 @@ const Card = (props) => {
             <div style={styles.CardIcons}>
                 <i style={styles.i} className="fa fa-heart" />
                 <i style={styles.i} className="fa fa-comment" />
+            </div>
+            <div style={styles.comments}>
+                <h6>{props.commentUsername}</h6>
+                <p>{props.comment}</p>
             </div>
         </div>
     );
