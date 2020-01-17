@@ -18,7 +18,8 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const useStyles = makeStyles(theme => ({
   card: {
-    width: 500
+    width: '40%',
+    margin: 10
   },
   media: {
     paddingTop: '100%', // 16:9
@@ -69,7 +70,7 @@ const ImageCard = (props) => {
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          {props.description}
+          {props.username}: {props.description}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
