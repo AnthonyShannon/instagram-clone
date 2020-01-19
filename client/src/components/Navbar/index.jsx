@@ -1,13 +1,24 @@
 import React from 'react';
-import { AppBar, Toolbar, IconButton, Button, Typography, InputBase } from '@material-ui/core';
-import { Instagram, Explore, FavoriteBorder, PersonOutline, Search } from '@material-ui/icons';
+import { AppBar, 
+  Toolbar, 
+  // IconButton, 
+  // Button, 
+  Typography, 
+  InputBase } from '@material-ui/core';
+import { Instagram, 
+  Explore, 
+  FavoriteBorder, 
+  PersonOutline, 
+  Search } from '@material-ui/icons';
 
 const styles = {
   root: {
     marginBottom: 100
   },
   AppBar: {
-    backgroundColor: 'white'
+    backgroundColor: 'white',
+    height: 50,
+    justifyContent: 'center'
   },
   Toolbar: {
     width: '100%',
@@ -30,7 +41,7 @@ const styles = {
     flexDirection: 'row',
     backgroundColor: 'lightgray',
     padding: 5,
-    maxHeight: 30,
+    height: 20,
     borderRadius: '20px 20px 20px 20px'
   },
   navIcons: {

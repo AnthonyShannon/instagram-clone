@@ -1,24 +1,23 @@
 import React from 'react';
 import './App.css';
-import MyImage from './testPhoto/profilePhoto.jpg';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from './components/Navbar';
-import Card from './components/Card';
 import Container from '@material-ui/core/Container'
+import Home from './pages/Homepage'
+
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Container>
-        <Card image={MyImage} 
-        username='ashannon1990'
-        datePosted='November 13, 2019'
-        description='Got some professional headshots done, really like how this one turned out. What do you guys think?' 
-        commenter="theGreatestEva2"
-        comment="looks great broski"
-        />
-      </Container>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Container maxWidth="md">
+          <Switch>
+            <Route exact path="/" component={Home} />
+          </Switch>
+        </Container>
+      </div>
+    </Router>
   );
 }
 

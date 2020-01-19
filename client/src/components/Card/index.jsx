@@ -1,25 +1,26 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import Collapse from '@material-ui/core/Collapse';
-import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
+import { Card,
+  CardHeader,
+  CardMedia,
+  CardContent,
+  CardActions,
+  Collapse,
+  Avatar,
+  IconButton,
+  Typography
+} from '@material-ui/core';
 import { red } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
+import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const useStyles = makeStyles(theme => ({
   card: {
-    width: '40%',
-    margin: 10
+    width: '100%',
+    margin: 'auto'
   },
   media: {
     paddingTop: '100%', // 16:9
@@ -40,7 +41,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const ImageCard = (props) => {
-  const classes = useStyles();
+  const styles = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -48,10 +49,10 @@ const ImageCard = (props) => {
   };
 
   return (
-    <Card className={classes.card}>
+    <Card className={styles.card}>
       <CardHeader
         avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}>
+          <Avatar aria-label="recipe" className={styles.avatar}>
             A
           </Avatar>
         }
@@ -64,7 +65,7 @@ const ImageCard = (props) => {
         subheader={props.datePosted}
       />
       <CardMedia
-        className={classes.media}
+        className={styles.media}
         image={props.image}
         title={props.title}
       />
@@ -77,12 +78,12 @@ const ImageCard = (props) => {
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
         </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
+        <IconButton aria-label="comment">
+          <ChatBubbleIcon />
         </IconButton>
         <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
+          className={clsx(styles.expand, {
+            [styles.expandOpen]: expanded,
           })}
           onClick={handleExpandClick}
           aria-expanded={expanded}
